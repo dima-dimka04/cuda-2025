@@ -457,3 +457,53 @@ std::vector<float> GeluOCL(const std::vector<float>& input) {
     // Place your implementation here
 }
 ```
+
+# Results
+## 1_gelu_omp (134217728 elements)
+|Group|Name|Result|Rank|
+|-----|----|------|----|
+|**FAST**|**FAST**|**0.1682**|**-**|
+|**REF**|**REF**|**0.8370**|**-**|
+
+## 2_gelu_cuda (134217728 elements)
+|Group|Name|Result|Rank|
+|-----|----|------|----|
+|**REF**|**REF**|**0.3492**|**-**|
+
+## 3_naive_gemm_omp (1024 elements)
+|Group|Name|Result|Rank|
+|-----|----|------|----|
+|**REF**|**REF**|**0.8283**|**-**|
+
+## 4_naive_gemm_cuda (4096 elements)
+|Group|Name|Result|Rank|
+|-----|----|------|----|
+|**REF**|**REF**|**0.4161**|**-**|
+
+## 5_block_gemm_omp (1024 elements)
+|Group|Name|Result|Rank|
+|-----|----|------|----|
+|**REF**|**REF**|**0.0840**|**-**|
+
+## 6_block_gemm_cuda (4096 elements)
+|Group|Name|Result|Rank|
+|-----|----|------|----|
+|**REF**|**REF**|**0.1464**|**-**|
+
+## 7_gemm_cublas (4096 elements)
+|Group|Name|Result|Rank|
+|-----|----|------|----|
+|**REF**|**REF**|**0.0718**|**-**|
+
+## 8_fft_cufft (131072 elements)
+|Group|Name|Result|Rank|
+|-----|----|------|----|
+|**REF**|**REF**|**0.2498**|**-**|
+
+## 9_gelu_ocl (134217728 elements)
+|Group|Name|Result|Rank|
+|-----|----|------|----|
+|**REF**|**REF**|**0.3768**|**-**|
+
+# Tasks Done
+**Total Passed: 0**
