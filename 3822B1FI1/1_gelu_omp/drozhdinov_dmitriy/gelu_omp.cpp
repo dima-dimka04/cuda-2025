@@ -13,6 +13,5 @@ AlignedVector GeluOMP(const AlignedVector& input) {
         float c2 = std::sqrt(2.0f / M_PI) * (x + 0.044715f * x * x * x);
         output[i] = c1 * (1.0f + std::tanh(c2));
     }
-
     return output;
 }
